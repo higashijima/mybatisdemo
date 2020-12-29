@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
+    <title>Kotlin spring sample</title>
+</head>
+<body>
+<h1>Model list</h1>
+<table>
+    <tr>
+        <th th:text="#{title.id}">No</th>
+        <th th:text="#{title.userName}">Name</th>
+        <th th:text="#{title.birthday}">Birthday</th>
+    </tr>
+    <th:block th:each="model : ${modelList}">
+        <tr>
+            <td th:text="#{model.id}">No</td>
+            <td th:text="#{model.userName}">Name</td>
+            <td th:text="#{model.birthday}">Birthday</td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
